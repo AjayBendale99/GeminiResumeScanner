@@ -44,9 +44,9 @@ st.text("Improve Your Resume ATS")
 jd=st.text_area("Paste the Job Description")
 uploaded_file=st.file_uploader("Upload Your Resume",type="pdf",help="Please uplaod the pdf")
 
-submit = st.button("Submit")
+submit_button = st.button("Submit")
 
-if submit:
+if submit_button:
     if uploaded_file is not None:
         text=input_pdf_text(uploaded_file)
         response=get_gemini_repsonse(input_prompt)
